@@ -1,5 +1,5 @@
-# spi_animate
-Animated face for SPI LCD screen for Raspberry Pi robot. The pattern will be bright when the robot is speaking and dimmer when its not.
+# Abstract Robot 'Face' Animation
+Animated face in Python for 240 x 240 SPI LCD screen for a Raspberry Pi based robot. The pattern will be bright when the robot is speaking and dimmer when its not.
 
 <ol>
 <li>Gif downloaded from Gifer</li>
