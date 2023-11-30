@@ -1,8 +1,9 @@
 import shutil
 import logging
-import LCD_1inch28
 
-from PIL import Image,ImageDraw
+from lib import LCD_1inch28
+
+from PIL import Image
 
 # load images into Pi memory
 source_prefix = "/home/hopkira/spi_animate/images/"
