@@ -1,5 +1,5 @@
 import shutil
-source_prefix = "/home/hopkira/spi_animate/"
+source_prefix = "/home/hopkira/spi_animate/images/"
 target_prefix = "/var/tmp/"
 for x in range(90):
     source = source_prefix + "frame_{0:02d}_delay-0.06s.gif".format(x)
