@@ -1,8 +1,7 @@
 import shutil
 import logging
-import sys
-sys.path.append("..")
-from lib import LCD_1inch28
+import LCD_1inch28
+
 from PIL import Image,ImageDraw
 
 # load images into Pi memory
