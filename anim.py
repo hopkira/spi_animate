@@ -33,7 +33,8 @@ try:
     while True:
         for x in range(90):
             image_file = target_prefix + "01_{0:02d}.gif".format(x)
-            image = Image.open(image_file)      
+            image = Image.open(image_file)
+            print(image)     
             disp.ShowImage(image)
             time.sleep(1)
             sys.stdout.write(next(spinner))   # write the next character
