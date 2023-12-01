@@ -1,11 +1,14 @@
 import shutil
 import logging
 import sys 
+import itertools
 
 sys.path.append("..")
 from lib import LCD_1inch28
 
 from PIL import Image
+
+spinner = itertools.cycle(['-', '/', '|', '\\'])
 
 # load images into Pi memory
 source_prefix = "/home/hopkira/spi_animate/images/"
@@ -21,6 +24,9 @@ try:
     disp.Init()
     disp.clear()
     while True:
+        sys.stdout.write(next(spinner))   # write the next character
+        sys.stdout.flush()                # flush stdout buffer (actual character display)
+        sys.stdout.write('\b')            # erase the last written char
         for x in range(90):
             image_file = target_prefix + "01_{0:02d}.gif".format(x)
             image = Image.open(image_file)      
