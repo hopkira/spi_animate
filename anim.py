@@ -8,6 +8,7 @@ sys.path.append("..")
 from lib import LCD_1inch28
 
 from PIL import Image
+from PIL import GifImagePlugin
 
 spinner = itertools.cycle(['-', '/', '|', '\\'])
 RST = 27
@@ -34,8 +35,8 @@ try:
         for x in range(90):
             image_file = target_prefix + "01_{0:02d}.gif".format(x)
             image = Image.open(image_file)
-            print(image)     
             disp.ShowImage(image)
+            print(image_file)
             time.sleep(1)
             sys.stdout.write(next(spinner))   # write the next character
             sys.stdout.flush()                # flush stdout buffer (actual character display)
