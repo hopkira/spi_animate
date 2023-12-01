@@ -2,6 +2,7 @@ import shutil
 import logging
 import sys 
 import itertools
+import time
 
 sys.path.append("..")
 from lib import LCD_1inch28
@@ -34,6 +35,7 @@ try:
             image_file = target_prefix + "01_{0:02d}.gif".format(x)
             image = Image.open(image_file)      
             disp.ShowImage(image)
+            time.sleep(1)
             sys.stdout.write(next(spinner))   # write the next character
             sys.stdout.flush()                # flush stdout buffer (actual character display)
             sys.stdout.write('\b')            # erase the last written char
