@@ -20,7 +20,7 @@ from PIL import Image,ImageDraw,ImageFont
 # Raspberry Pi pin configuration:
 RST = 27
 DC = 25
-BL = 23 # changed default due to clash with LCD screen
+BL = 18 # changed to 23 from 18 due to clash with LCD screen
 bus = 0 
 device = 0 
 logging.basicConfig(level=logging.DEBUG)
