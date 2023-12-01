@@ -5,9 +5,9 @@ import os
 import sys 
 import time
 import logging
-import LCD_1inch28
 import spidev as SPI
 sys.path.append("..")
+from lib import LCD_1inch28
 from PIL import Image,ImageDraw,ImageFont
 
 # load images into memory disk
