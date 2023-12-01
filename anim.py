@@ -2,7 +2,7 @@ import shutil
 import logging
 import sys 
 import itertools
-import time
+from tqdm import tqdm
 
 sys.path.append("..")
 from lib import LCD_1inch28
@@ -20,11 +20,10 @@ device = 0
 # load images into Pi memory
 source_prefix = "/home/hopkira/spi_animate/images/"
 target_prefix = "/var/tmp/"
-for x in range(90):
+for x in tqdm(range(90)):
     source = source_prefix + "frame_{0:02d}_delay-0.06s.jpg".format(x)
     target = target_prefix + "01_{0:02d}.jpg".format(x)
     shutil.copyfile(source, target)
-    print(source,"->",target)
 
 try:
     #disp = LCD_1inch28.LCD_1inch28(spi=SPI.SpiDev(bus, device),spi_freq=10000000,rst=RST,dc=DC,bl>
