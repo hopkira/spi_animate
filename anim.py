@@ -9,6 +9,11 @@ from lib import LCD_1inch28
 from PIL import Image
 
 spinner = itertools.cycle(['-', '/', '|', '\\'])
+RST = 27
+DC = 25
+BL = 18
+bus = 0 
+device = 0
 
 # load images into Pi memory
 source_prefix = "/home/hopkira/spi_animate/images/"
@@ -20,7 +25,8 @@ for x in range(90):
     print(source,"->",target)
 
 try:
-    disp = LCD_1inch28.LCD_1inch28()
+    #disp = LCD_1inch28.LCD_1inch28(spi=SPI.SpiDev(bus, device),spi_freq=10000000,rst=RST,dc=DC,bl>
+    disp = LCD_1inch28.LCD_1inch28(rst=RST,bl=BL,dc=DC)
     disp.Init()
     disp.clear()
     while True:
