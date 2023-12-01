@@ -33,7 +33,7 @@ try:
     disp.clear()
     while True:
         for x in range(90):
-            image_file = target_prefix + "01_{0:02d}.gif".format(x)
+            image_file = target_prefix + "01_{0:02d}.jpg".format(x)
             image = Image.open(image_file)
             disp.ShowImage(image)
             print(image_file)
