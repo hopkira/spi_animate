@@ -18,7 +18,7 @@ device = 0
 colours = ["green","lime","orange","yellow","red",]
 
 # load images into Pi memory
-for num, colour in iter(colours):
+for num, colour in enumerate(colours):
     source_prefix = "/home/hopkira/spi_animate/images/" + colour
     target_prefix = "/var/tmp/"
     for x in tqdm(range(90)):
