@@ -8,7 +8,6 @@ sys.path.append("..")
 from lib import LCD_1inch28
 
 from PIL import Image
-from PIL import GifImagePlugin
 
 spinner = itertools.cycle(['-', '/', '|', '\\'])
 RST = 27
