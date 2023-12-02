@@ -33,12 +33,13 @@ try:
     disp.clear()
     while True:
         for x in range(90):
-            image_file = target_prefix + "4_{0:02d}.jpg".format(x)
-            image = Image.open(image_file)
-            disp.ShowImage(image)
-            sys.stdout.write(next(spinner))   # write the next character
-            sys.stdout.flush()                # flush stdout buffer (actual character display)
-            sys.stdout.write('\b')            # erase the last written char
+            for y in range(5):
+                image_file = target_prefix + str(y) + "_{0:02d}.jpg".format(x)
+                image = Image.open(image_file)
+                disp.ShowImage(image)
+                sys.stdout.write(next(spinner))   # write the next character
+                sys.stdout.flush()                # flush stdout buffer (actual character display)
+                sys.stdout.write('\b')            # erase the last written char
 except IOError as e:
     logging.info(e)    
 except KeyboardInterrupt:
