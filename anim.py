@@ -32,8 +32,8 @@ try:
     disp.Init()
     disp.clear()
     while True:
-        for x in range(90):
-            for y in range(5):
+        for y in range(5):
+            for x in range(90):
                 image_file = target_prefix + str(y) + "_{0:02d}.jpg".format(x)
                 image = Image.open(image_file)
                 disp.ShowImage(image)
